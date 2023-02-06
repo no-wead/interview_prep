@@ -1,0 +1,17 @@
+from itertools import combinations
+
+dwfs = []
+
+for i in range(9):
+    dwfs.append(int(input()))
+
+cases = list(combinations(dwfs, 7))
+
+for case in cases:
+    if sum(list(case)) == 100:
+        real_dwfs = list(case)
+        break
+
+real_dwfs.sort()
+for i in real_dwfs:
+    print(i)
